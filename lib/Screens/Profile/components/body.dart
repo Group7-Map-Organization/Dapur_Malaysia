@@ -15,17 +15,15 @@ class Body extends StatelessWidget {
     return Background(
       child: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             SizedBox(height: size.height * 0.03),
-            SvgPicture.asset(
-              "assets/icons/dapur_malaysia.svg",
-              height: size.height * 0.35,
-            ),
-            SizedBox(height: size.height * 0.03),
-             Text(
+            Text(
               "YOUR PROFILE",
-              style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 23,
+              ),
             ),
             RoundedInputField(
               hintText: "Your Name",
@@ -33,6 +31,23 @@ class Body extends StatelessWidget {
             ),
             RoundedInputField(
               hintText: "Your Email",
+              onChanged: (value) {},
+            ),
+            Text(
+              "CHANGE PASSWORD?",
+              textAlign: TextAlign.justify,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+            ),
+            RoundedInputField(
+              hintText: "Enter Your Current Password",
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
+              hintText: "New Password",
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
+              hintText: "Confirm New Password",
               onChanged: (value) {},
             ),
             RoundedButton(

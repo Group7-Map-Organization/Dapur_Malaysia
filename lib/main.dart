@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:dapur_malaysia/Screens/Welcome/welcome_screen.dart';
+//import 'package:dapur_malaysia/Screens/Welcome/welcome_screen.dart';
 //import 'package:dapur_malaysia/Screens/Profile/profile_screen.dart';
 import 'package:dapur_malaysia/constants.dart';
+import 'package:dapur_malaysia/Homepage/homepageCreator.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: WelcomeScreen(),
+      home: HomepageCreator(),
     );
   }
 }

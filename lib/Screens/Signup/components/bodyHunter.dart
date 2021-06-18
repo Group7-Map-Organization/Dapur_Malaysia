@@ -49,7 +49,7 @@ class TransferDataWidget extends State {
     // API URL
 
     if (name.isNotEmpty && email.isNotEmpty && password.isNotEmpty) {
-      var url = ''; // put url database here
+      // var url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC93qNHEHxotzDUhesxY-dDwX2tD8kwTAM'; // put url database here
       // Store all data with Param Name.
       var data = {
         'name': name,
@@ -59,7 +59,7 @@ class TransferDataWidget extends State {
       };
 
       // Starting Web Call with data.
-      var response = await http.post(url, body: json.encode(data));
+      dynamic response = await http.post(Uri.parse('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC93qNHEHxotzDUhesxY-dDwX2tD8kwTAM'), body: json.encode(data));
 
       // Getting Server response into variable.
       var message = jsonDecode(response.body);

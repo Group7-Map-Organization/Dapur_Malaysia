@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "478482779704",
+    "firebase_url": "https://dapur-malaysia-backend-default-rtdb.firebaseio.com",
+    "project_id": "dapur-malaysia-backend",
+    "storage_bucket": "dapur-malaysia-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478482779704:android:708e4a30175ec98048a0cd",
+        "android_client_info": {
+          "package_name": "com.example.dapur_malaysia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478482779704-ct5djtb2hakbmu4u7i13me8opv8ifufs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC93qNHEHxotzDUhesxY-dDwX2tD8kwTAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478482779704-ct5djtb2hakbmu4u7i13me8opv8ifufs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

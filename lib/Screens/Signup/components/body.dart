@@ -7,7 +7,7 @@ import 'package:dapur_malaysia/components/already_have_an_account_acheck.dart';
 import 'package:dapur_malaysia/components/rounded_button.dart';
 import 'package:dapur_malaysia/components/rounded_input_field.dart';
 import 'package:dapur_malaysia/components/rounded_password_field.dart';
-import 'package:flutter_svg/svg.dart';
+//import 'package:flutter_svg/svg.dart';
 
 class Body extends StatefulWidget 
 {

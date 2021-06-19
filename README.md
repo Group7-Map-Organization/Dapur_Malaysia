@@ -1,16 +1,12 @@
 # dapur_malaysia
+Dapur Malaysia is the mobile application (Flutter as a framework) which can help user to search for the malaysian food recipe that they want to and help the creator to upload the recipe in the mobile apps.
 
-A new Flutter project.
+## Release 1 : Authentication
+Include Register (Sign Up), Login, and Edit Profile
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+Version 1.0 : Authentication
+☠️ Problem 1: Registration - Failed to pop up the 'Register is successful' message (But the data already stored in the database)
+☠️ Problem 2: Edit Profile - Failed to synchronize edit profile with the registration details
+☠️ Problem 3: Login - Failed to login with the correct details
+```

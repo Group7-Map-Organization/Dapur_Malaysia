@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:dapur_malaysia/Screens/Profile/components/body.dart';
+import 'package:dapur_malaysia/Homepage/recipeCreator/components/body.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ProfileScreen extends StatelessWidget {
+class RecipeCreatorHomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +38,14 @@ class ProfileScreen extends StatelessWidget {
         ],
       ),
       body: Body(),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purple,
+        onPressed: () {},
+        child: Icon(
+          Icons.add,
+          size: 30,
+        ),
+      ),
     );
   }
 }

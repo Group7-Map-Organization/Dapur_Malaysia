@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:dapur_malaysia/Screens/Profile/components/body.dart';
+import 'package:dapur_malaysia/Screens/addFood/components/body.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ProfileScreen extends StatelessWidget {
+class addFoodScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

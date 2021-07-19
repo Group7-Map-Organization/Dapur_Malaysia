@@ -8,8 +8,8 @@ import 'package:dapur_malaysia/components/rounded_button.dart';
 import 'package:dapur_malaysia/components/rounded_input_field.dart';
 import 'package:dapur_malaysia/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
-//import 'package:dapur_malaysia/Screens/Homepage/homepageCreator.dart';
-//import 'package:dapur_malaysia/Screens/Homepage/homepageHunter.dart';
+import 'package:dapur_malaysia/components/text_field_container.dart';
+import 'package:dapur_malaysia/constants.dart';
 import 'package:dapur_malaysia/User.dart';
 import 'package:dapur_malaysia/Screens/Login/components/Services.dart';
 
@@ -177,6 +177,71 @@ class TransferDataWidget extends State {
               },
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class EmailField extends StatelessWidget {
+  final String hintText;
+  final IconData icon;
+  final ValueChanged<String> onChanged;
+  const EmailField({
+    Key key,
+    this.hintText,
+    this.icon = Icons.person,
+    this.onChanged,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFieldContainer(
+      child: TextField(
+        controller: emailController,
+        autocorrect: true,
+        onChanged: onChanged,
+        cursorColor: kPrimaryColor,
+        decoration: InputDecoration(
+          icon: Icon(
+            icon,
+            color: kPrimaryColor,
+          ),
+          hintText: hintText,
+          border: InputBorder.none,
+        ),
+      ),
+    );
+  }
+}
+
+class PasswordField extends StatelessWidget {
+  final ValueChanged<String> onChanged;
+  const PasswordField({
+    Key key,
+    this.onChanged,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFieldContainer(
+      child: TextField(
+        controller: passwordController,
+        autocorrect: true,
+        obscureText: true,
+        onChanged: onChanged,
+        cursorColor: kPrimaryColor,
+        decoration: InputDecoration(
+          hintText: "Password",
+          icon: Icon(
+            Icons.lock,
+            color: kPrimaryColor,
+          ),
+          // suffixIcon: Icon(
+          //   Icons.visibility,
+          //   color: kPrimaryColor,
+          // ),
+          border: InputBorder.none,
         ),
       ),
     );

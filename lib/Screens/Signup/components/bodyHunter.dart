@@ -9,6 +9,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:dapur_malaysia/components/text_field_container.dart';
 import 'package:dapur_malaysia/constants.dart';
+import 'package:dapur_malaysia/Screens/services/auth.dart';
 
 // Getting value from TextField widget.
 final nameController = TextEditingController();
@@ -33,6 +34,7 @@ class TransferData extends StatefulWidget {
 }
 
 class TransferDataWidget extends State {
+  final AuthService _auth = AuthService();
   // Boolean variable for CircularProgressIndicator.
   bool visible = false;
 
@@ -59,7 +61,10 @@ class TransferDataWidget extends State {
       };
 
       // Starting Web Call with data.
-      dynamic response = await http.post(Uri.parse('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC93qNHEHxotzDUhesxY-dDwX2tD8kwTAM'), body: json.encode(data));
+      dynamic response = await http.post(
+          Uri.parse(
+              'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC93qNHEHxotzDUhesxY-dDwX2tD8kwTAM'),
+          body: json.encode(data));
 
       // Getting Server response into variable.
       var message = jsonDecode(response.body);
@@ -148,8 +153,23 @@ class TransferDataWidget extends State {
             ),
             RoundedButton(
               text: "SIGN UP",
-              press: () {
-                webCall();
+              press: () async {
+                print(nameController.text);
+                print(emailController.text);
+                print(passwordController.text);
+                setState(() {
+                  visible = true;
+                });
+                dynamic result = await _auth.registerWithEmailAndPassword(
+                    nameController.text,
+                    emailController.text,
+                    passwordController.text);
+                if (result == null) {
+                  setState(() {
+                    Text("COULD NOT REGISTER!");
+                    visible = false;
+                  });
+                }
               },
             ),
             Visibility(
@@ -193,37 +213,6 @@ class NameField extends StatelessWidget {
     return TextFieldContainer(
       child: TextField(
         controller: nameController,
-        autocorrect: true,
-        onChanged: onChanged,
-        cursorColor: kPrimaryColor,
-        decoration: InputDecoration(
-          icon: Icon(
-            icon,
-            color: kPrimaryColor,
-          ),
-          hintText: hintText,
-          border: InputBorder.none,
-        ),
-      ),
-    );
-  }
-}
-
-class IcField extends StatelessWidget {
-  final String hintText;
-  final IconData icon;
-  final ValueChanged<String> onChanged;
-  const IcField({
-    Key key,
-    this.hintText,
-    this.icon = Icons.person,
-    this.onChanged,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return TextFieldContainer(
-      child: TextField(
         autocorrect: true,
         onChanged: onChanged,
         cursorColor: kPrimaryColor,

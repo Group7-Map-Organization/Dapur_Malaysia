@@ -1,4 +1,4 @@
-//import 'package:dapur_malaysia/Screens/addFood/addFood_screen.dart';
+import 'package:dapur_malaysia/Screens/addFood/addFood_screen.dart';
 //import 'package:dapur_malaysia/Screens/editFood/editFood_screen.dart';
 import 'package:flutter/material.dart';
 // import 'package:dapur_malaysia/Screens/Welcome/welcome_screen.dart';
@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
       ),
       // home: WelcomeScreen(),
       // home: ProfileScreen(),
-      home: HomePage(),
+      // home: HomePage(),
       // home: HomepageCreator(), 
-      //home: addFoodScreen(), 
+      home: addFoodScreen(), 
       //home: editFoodScreen(), 
     );
   }

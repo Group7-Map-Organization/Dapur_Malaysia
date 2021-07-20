@@ -1,5 +1,5 @@
-import 'package:dapur_malaysia/Homepage/homepageCreator.dart';
-import 'package:dapur_malaysia/Homepage/homepageHunter.dart';
+import 'package:dapur_malaysia/Homepage/recipeCreator/recipeCreator_home.dart';
+import 'package:dapur_malaysia/Homepage/hunter/pages/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:dapur_malaysia/Screens/Login/components/background.dart';
 import 'package:dapur_malaysia/Screens/Signup/signup_screen.dart';
@@ -117,14 +117,14 @@ class TransferDataWidget extends State {
           showDialog(
             context: context,
             builder: (BuildContext context) {
-              return HomepageCreator();
+              return RecipeCreatorHomeScreen();
             },
           );
         } else if (userType == type2) {
           showDialog(
             context: context,
             builder: (BuildContext context) {
-              return HomepageHunter();
+              return HomePage();
             },
           );
         }
